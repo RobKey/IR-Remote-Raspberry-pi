@@ -69,7 +69,7 @@ ttk.Button(mainframe, text="REPEAT", command=lambda:irsend("KEY_MEDIA_REPEAT")).
 
 for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
 
-imgicon = PhotoImage(file=os.path.join('/home/pi/workspace/FanSpeed/win4.py','/home/pi/Downloads/ir-icon.png'))
+imgicon = PhotoImage(file=os.path.join('/home/pi/workspace/irremote/pi-remote.py','/home/pi/Downloads/ir-icon.png'))
 root.tk.call('wm', 'iconphoto', root._w, imgicon) 
 root.mainloop()
 
