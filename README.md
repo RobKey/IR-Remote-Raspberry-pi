@@ -1,2 +1,3 @@
-# RPi-Fan-Speed
-Fan speed controller for Raspberry pi 3
+# IR-Remote-Raspberry-pi
+IR remote for Raspberry pi 3
+GUI software version
