@@ -3,14 +3,22 @@ from tkinter import ttk
 from time import sleep
 import subprocess
 import os
+import time
 
-bashcon = "irsend SEND_ONCE Soniq "
+bashcon = "irsend send_once Soniqq "
+StartTime = 0
+StopTime = 0
 
 def irsend(str):
     #print(str)
-    bashCommand = bashcon + str
-    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
+    global StartTime
+    global StopTime
+    StartTime = time.time()
+    if StopTime < StartTime:
+        StopTime = StartTime + 0.33
+        bashCommand = bashcon + str
+        process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+        output, error = process.communicate()
 
 root = Tk()
 root.title("Pi IR Remote")
